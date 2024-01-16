@@ -53,3 +53,47 @@ if __name__ == '__main__':
     
 for i in range (n):
     print(i**2)
+
+### For Functions
+
+def is_leap(year):
+   
+    if year % 4 == 0:
+        leap = True 
+        if year % 100 == 0:
+            leap = False
+            if year % 400 == 0:
+                leap = True
+    else:
+        leap = False   
+    # Write your logic here
+    
+    return leap
+
+
+year = int(input())
+print(is_leap(year))
+
+### list of integers
+
+if __name__ == '__main__':
+    n = int(input())
+    print(*range(1, n+1), sep='')
+
+### List of compressions
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+
+print([[a, b, c] for a in range(x+1) for b in range(y+1) for c in range(z+1) if a + b + c != n])
+
+
+### runner up
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    print(sorted(list(set(arr)))[-2])
